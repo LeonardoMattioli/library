@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="paneMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="834.0" prefWidth="1194.0" styleClass="fundo" stylesheets="@dark_mode.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.AutorController">
+   <children>
+      <Pane prefHeight="64.0" prefWidth="1194.0" styleClass="botao" stylesheets="@../dark_mode.css">
+         <children>
+            <Label layoutX="14.0" layoutY="9.0" text="Autores mais buscados" textFill="#fff8f8">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <GridPane layoutX="248.0" layoutY="134.0" prefHeight="469.0" prefWidth="698.0">
+         <children>
+            <Label text="Data nascimento" textFill="#f1f1f1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label text="CPF" textFill="#f1f1f1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label text="Nacionalidade" textFill="#f1f1f1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCpf" prefHeight="34.0" prefWidth="422.0" styleClass="txt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtNacionalidade" prefHeight="34.0" prefWidth="422.0" styleClass="txt" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtNome" prefHeight="34.0" prefWidth="422.0" styleClass="txt" GridPane.columnIndex="1" />
+            <Label text="Nome" textFill="#f1f1f1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label text="Sobrenome" textFill="#f1f1f1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSobrenome" prefHeight="34.0" prefWidth="422.0" styleClass="txt" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtData" prefHeight="34.0" prefWidth="422.0" styleClass="txt" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="344.0" minWidth="10.0" prefWidth="276.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="474.0" minWidth="10.0" prefWidth="422.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <HBox layoutX="211.0" layoutY="666.0" prefHeight="59.0" prefWidth="772.0" spacing="155.0">
+         <children>
+            <Button fx:id="btnExcluir" mnemonicParsing="false" onAction="#btnExcluirClick" prefHeight="55.0" prefWidth="112.0" styleClass="botao" text="Excluir">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnInserir" mnemonicParsing="false" onAction="#btnInserirClick" prefHeight="55.0" prefWidth="216.0" styleClass="botao" text="Inserir autor">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAlterar" mnemonicParsing="false" onAction="#btnAlterarClick" prefHeight="55.0" prefWidth="126.0" styleClass="botao" text="Alterar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="btnPesquisa" layoutX="989.0" layoutY="162.0" mnemonicParsing="false" onAction="#btnPesquisarClick" prefHeight="34.0" prefWidth="146.0" styleClass="botao" text="Pesquisar">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

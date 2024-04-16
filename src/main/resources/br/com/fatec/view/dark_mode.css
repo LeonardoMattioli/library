@@ -1,0 +1,54 @@
+.title-bar{
+    -fx-background-color: #303443;
+}
+
+.primary{
+    -fx-background-color: #202124;
+}
+
+.success{
+    -fx-background-color: #594636;
+}
+
+.btn-primary{
+    -fx-background-color: #3B3B40;
+    -fx-text-fill: #ffff;
+}
+
+.btn-success{
+    -fx-border-radius: 50px;
+    -fx-background-color: #303134;
+    -fx-text-fill: #ffff;
+}
+
+
+.txt-primary{
+    -fx-font-family: "Popping";
+    -fx-text-fill: #ffff;
+}
+
+.fundo{
+    -fx-background-color: #4D3631;
+}
+
+.botao{
+    -fx-background-color: #302420;
+    -fx-text-fill: #ffff;
+
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 5, 0, 0, 0);
+    -fx-font-weight: bold;
+}
+
+.txt{
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0.5, 2, 2);
+    -fx-pref-height: 34;
+}
+
+.images{
+    -fx-text-fill: #ffff;
+    -fx-background-color: #ffff;
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="paneMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="834.0" prefWidth="1194.0" stylesheets="@dark_mode.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.TablelivroController">
+   <children>
+      <Pane prefHeight="64.0" prefWidth="1194.0" styleClass="botao" stylesheets="@../dark_mode.css">
+         <children>
+            <Label layoutX="14.0" layoutY="9.0" text="TableView Livros" textFill="#fff8f8">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="btnPesquisar" layoutX="861.0" layoutY="102.0" mnemonicParsing="false" onAction="#btnPesquisarClick" prefHeight="40.0" prefWidth="160.0" styleClass="botao" text="Pesquisar" />
+      <TextField fx:id="txtPesquisa" layoutX="385.0" layoutY="105.0" prefHeight="40.0" prefWidth="374.0" styleClass="txt" />
+      <TableView fx:id="tb_Livro" layoutX="145.0" layoutY="200.0" prefHeight="492.0" prefWidth="926.0">
+        <columns>
+          <TableColumn fx:id="colTitulo" prefWidth="231.0" text="Titulo" />
+          <TableColumn fx:id="colAutor" prefWidth="161.0" text="Autor" />
+            <TableColumn fx:id="colAno" prefWidth="126.0" text="Ano Lancamento" />
+            <TableColumn fx:id="colEditora" prefWidth="187.0" text="editora" />
+            <TableColumn fx:id="colGenero" prefWidth="151.0" text="genero" />
+            <TableColumn fx:id="colIdade" prefWidth="67.0" text="idade" />
+        </columns>
+      </TableView>
+   </children>
+   <styleClass>
+      <String fx:value="success" />
+      <String fx:value="fundo" />
+   </styleClass>
+</Pane>

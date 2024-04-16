@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="paneMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="834.0" prefWidth="1194.0" styleClass="fundo" stylesheets="@dark_mode.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.EmprestimoController">
+   <children>
+      <Pane prefHeight="64.0" prefWidth="1194.0" styleClass="botao" stylesheets="@../dark_mode.css">
+         <children>
+            <Label layoutX="14.0" layoutY="9.0" text="Empréstimos" textFill="#fff8f8">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <GridPane layoutX="248.0" layoutY="215.0" prefHeight="469.0" prefWidth="698.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="344.0" minWidth="10.0" prefWidth="276.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="474.0" minWidth="10.0" prefWidth="422.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Livro Emprestado" textFill="#f1f1f1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label text="Data do Empŕestimo" textFill="#f1f1f1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label text="Data de devolução" textFill="#f1f1f1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtData1" prefHeight="34.0" prefWidth="422.0" styleClass="txt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtData2" prefHeight="34.0" prefWidth="422.0" styleClass="txt" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="cbLivro" prefHeight="34.0" prefWidth="420.0" promptText="Lista de Livros" styleClass="txt" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtEmprestimo" prefHeight="34.0" prefWidth="422.0" styleClass="txt" GridPane.columnIndex="1" />
+            <Label text="Id do emprestimo" textFill="#f1f1f1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label text="CPF Do Usuário" textFill="#f1f1f1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbCpf" prefHeight="34.0" prefWidth="422.0" promptText="Lista de Usuários" styleClass="txt" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <HBox layoutX="212.0" layoutY="700.0" prefHeight="59.0" prefWidth="772.0" spacing="155.0">
+         <children>
+            <Button fx:id="btnExcluir" mnemonicParsing="false" onAction="#btnExcluirClick" prefHeight="55.0" prefWidth="112.0" styleClass="botao" text="Excluir">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEmprestar" mnemonicParsing="false" onAction="#btnEmprestarClick" prefHeight="55.0" prefWidth="216.0" styleClass="botao" text="Emprestar Livro">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAlterar" mnemonicParsing="false" onAction="#btnAlterarClick" prefHeight="55.0" prefWidth="126.0" styleClass="botao" text="Alterar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="btnPesquisar" layoutX="827.0" layoutY="135.0" mnemonicParsing="false" onAction="#btnPesquisarClick" prefHeight="47.0" prefWidth="159.0" styleClass="botao" text="Pesquisar">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Button>
+      <Label layoutX="467.0" layoutY="93.0" text="Pesquisar Empréstimos" textFill="#f1f1f1">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPesquisa" layoutX="455.0" layoutY="147.0" prefHeight="25.0" prefWidth="286.0" promptText="Pesquisar Por ID do Emprestimo" />
+   </children>
+</Pane>
